@@ -14,15 +14,12 @@ export default function Repository() {
     const { itemsPerPage, pagesVisited, pageCount, changePage } = usePagination({ data });
 
     const handleSearchInput = (e) => {
-        setSearchValue(() => {
-            dispatch(fetchData(e.target.value));
-            return e.target.value;
-        });
+        setSearchValue(e.target.value);
     }
 
     useEffect(() => {
         dispatch(fetchData(searchValue));
-    } , [])
+    } , [dispatch, searchValue])
 
     return (
         <div className={styles.wrapper}>

@@ -7,7 +7,7 @@ export default function RepositoryItem({ item }) {
     return (
         <div className={styles.item}>
             <div className={styles.leftWrapper}>
-                <img className={styles.img} src={item.owner.avatar_url} alt="image"/>
+                <img className={styles.img} src={item.owner.avatar_url} alt="logo"/>
                 <div className={styles.itemInfo}>
                     <div>{item.name}</div>
                     <div>{item.owner.login}</div>
